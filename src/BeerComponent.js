@@ -1,4 +1,5 @@
 import React from 'react';
+import beersLikeIcon from './beers-like-icon.png';
 
 class BeerComponent extends React.Component {
   constructor(props){
@@ -16,13 +17,17 @@ class BeerComponent extends React.Component {
   }
 
   render() {
+    const beersIcon = <img src={beersLikeIcon} alt="beers icon" style={{height: '30px'}}/>
     return (
       <div>
         <ul>{this.props.beers.map((beer) => {
           return (
             <li key={beer.id}>
               {beer.name}
-              <button onClick={() => this.likeButton(beer.id)}>Like</button>
+              <button onClick={() => this.likeButton(beer.id)}>like</button>
+              <div>
+                {this.state.isLiked ? beersIcon : null}
+              </div>
             </li>
           )})}
         </ul>
@@ -32,3 +37,5 @@ class BeerComponent extends React.Component {
 }
 
 export default BeerComponent;
+
+//<img src={beersLikeIcon} alt="beers icon" style={{height: '30px'}}/>
