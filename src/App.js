@@ -1,5 +1,5 @@
 import React from 'react';
-import BeerComponent from './BeerComponent';
+import ListBeer from './components/ListBeer';
 import logo from './beer-img.jpg';
 import './App.css';
 
@@ -29,7 +29,7 @@ class App extends React.Component {
       <div>
         <header className="App-header">
           <img className="main-logo" src={logo} alt="logo" />
-          <BeerComponent beers={this.state.beers}/>
+          <ListBeer beers={this.state.beers}/>
         </header>
       </div>
     )
