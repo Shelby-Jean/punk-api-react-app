@@ -26,9 +26,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <div>
         <header className="App-header">
-          <img src={logo} style={{height: '250px', marginTop: '20px'}} alt="logo" />
+          <img className="main-logo" src={logo} alt="logo" />
           <BeerComponent beers={this.state.beers}/>
         </header>
       </div>

@@ -17,14 +17,14 @@ class BeerComponent extends React.Component {
   }
 
   render() {
-    const beersIcon = <img src={beersLikeIcon} alt="beers icon" style={{height: '30px'}}/>
+    const beersIcon = <img className="beers-icon" src={beersLikeIcon} alt="beers icon"/>
     return (
       <div>
         <ul>{this.props.beers.map((beer) => {
           return (
             <li key={beer.id}>
               {beer.name}
-              <button onClick={() => this.likeButton(beer.id)}>like</button>
+              <button className="like-button" onClick={() => this.likeButton(beer.id)}>like</button>
               <div>
                 {this.state.isLiked ? beersIcon : null}
               </div>
@@ -37,5 +37,3 @@ class BeerComponent extends React.Component {
 }
 
 export default BeerComponent;
-
-//<img src={beersLikeIcon} alt="beers icon" style={{height: '30px'}}/>
