@@ -18,8 +18,6 @@ class BeerComponent extends React.Component {
   render() {
     const beersIcon = <img className="beers-icon" src={beersLikeIcon} alt="beers icon"/>
     return (
-     <div>
-      <ul>
         <li>
           {this.props.beer.name}
           <button className="like-button" onClick={() => this.likeButton()}>{this.state.isLiked ? 'unlike' : 'like'}</button>
@@ -27,8 +25,6 @@ class BeerComponent extends React.Component {
           {this.state.isLiked ? beersIcon : null}
           </div>
         </li>
-      </ul>
-    </div>
     )
   }
 }

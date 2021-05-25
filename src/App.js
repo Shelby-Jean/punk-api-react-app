@@ -18,11 +18,10 @@ class App extends React.Component {
         let beers = data.map(beer => beer);
         this.setState({
           beers
-        }, () => {console.log(this.state)})
+        }, () => {console.log(this.setState)})
       })
       .catch(error => console.log(`Error, ${error}`))
   }
-
 
   render() {
     return (
